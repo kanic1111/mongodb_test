@@ -12,6 +12,9 @@ MongoClient.connect("mongodb://localhost:27017/database", function (err, client)
 }); 
 ```
 ## mongodb_insert_data
+
+在寫插入資料表的程式的時候發生了版本問題,在nodejs的mongodb套件
+中 2.X版的connect funtion是使用db 但是3.0版的是使用client 所以mongodb那邊會報說 db.xxxx is not a funtion
 ```javascript=
 var MongoClient=require('mongodb').MongoClient;
  
